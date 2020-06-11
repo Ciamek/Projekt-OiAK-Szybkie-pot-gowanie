@@ -1,0 +1,19 @@
+Projekt na kurs Organizacja i Architektura Komputerow
+Szybkie potegowanie wielkich liczb
+Maciej Ciura 248879 10.06.2020
+
+Instrukcja kompilacji:
+$ make - kompiluje caly projekt
+$ make main - kompiluje do wersji demonstracyjnej
+$ make test - kompiluje do wersji z pomiarem czasu i weryfikacja wynikow
+
+Procedura testowania poprawnosci wynikow:
+$ python test.py - uruchamia skrypt testowy generujacy zestaw danych do obliczen wraz z wynikami do dwoch osobnych plikow:
+    data_input     - plik wsadowy do programu potegujacego
+    result_python  - wynik obliczen sluzacy do weryfikacji
+
+$ ./OiAK_Potegowanie_TEST - uruchamia program wykonujacy obliczenia, wyniki zapisywane sa do pliku:
+    result_cpp - wyniki obliczen
+    Dane pomiarowe/times - czasy wykonywania obliczen
+$ diff result_python result_cpp - porownuje plik wynikowy z plikiem referencyjym. Brak wiadomosci zwrotnej oznacza poprawnosc wszystkich wynikow
+$ python plot.py - skrypt rzutujacy czasy wykonywania programu na wykresie
